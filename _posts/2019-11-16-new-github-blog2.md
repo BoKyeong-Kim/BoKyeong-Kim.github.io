@@ -1,7 +1,7 @@
 ---
 layout: post
 title: github.io 개인 블로그 만들기(2)
-feature-img: "assets/img/github-logo.png"
+feature-img: "assets/img/github-logo(1).png"
 tags: [github.io, gitblog, jekyll]
 ---
 
