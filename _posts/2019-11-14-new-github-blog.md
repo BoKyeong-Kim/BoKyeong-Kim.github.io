@@ -1,11 +1,12 @@
 ---
 layout: post
-title: github.io 개인 블로그 만들기
+title: github.io 개인 블로그 만들기(1)
 feature-img: "assets/img/github-logo.png"
 tags: [github.io, gitblog, jekyll]
 ---
 
-노트북을 맥으로 바꾸고 jekyll을 설치하는게 편해졌다. 그래서 이용해서 블로그를 계속해서 써볼까하는 생각만하다가 실행에 옮기기로 했다! 
+노트북을 맥으로 바꾸고 jekyll을 설치하는게 편해졌다. 
+그래서 이용해서 블로그를 계속해서 써볼까하는 생각만하다가 실행에 옮기기로 했다! 
 
 
 
