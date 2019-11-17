@@ -2,6 +2,7 @@
 layout: post
 title: github.io 개인 블로그 만들기(1)
 feature-img: "assets/img/github-logo(1).png"
+subtitle: < jekyll >
 tags: [github.io, gitblog, jekyll]
 ---
 
@@ -41,30 +42,21 @@ sudo gem install jekyll
 (base) ➜  blog jekyll new [github 사용자명].github.io
 
 Running bundle install in /Users/gimbogyeong/blog/bokyeong-kim.github.io... 
-.
-.
-.
 ```
 
 
 * blog위치에 new로 생성한 디렉터리가 존재한다.
-* 여기서 주의할 점 `bokyeong-kim.github.io` 디렉터리로 현재 위치를 옮겨줘야한다.
+* 여기서 주의할 점 **bokyeong-kim.github.io** 디렉터리로 현재 위치를 옮겨줘야한다.
 
 ```
 (base) ➜  blog cd bokyeong-kim.github.io 
-(base) ➜  bokyeong-kim.github.io jekyll serve               
-.
-.
-.
+(base) ➜  bokyeong-kim.github.io jekyll serve
 Server address: http://127.0.0.1:4000/
 Server running... press ctrl-c to stop.
-.
-.
-.
 ```
 
 
-* `http://127.0.0.1:4000/` 에 접속하면 Jekyll 기본테마의 블로그가 나타난다.
+* **http://127.0.0.1:4000/** 에 접속하면 Jekyll 기본테마의 블로그가 나타난다.
 
 
 

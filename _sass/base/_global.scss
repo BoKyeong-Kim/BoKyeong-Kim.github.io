@@ -75,7 +75,6 @@ th {
 table,
 dl,
 blockquote,
-code,
 kbd,
 pre,
 samp {
@@ -129,3 +128,14 @@ img[align=left] {
 img[align=right] {
   margin-left: 3%;
 }
+code{
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  border-radius: 3px;
+  background: $code-color;
+  display: block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+}
+
