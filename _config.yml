@@ -5,16 +5,15 @@ url: "https://BoKyeong-Kim.github.io/"
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: bokyeoning blog
+  title: bokyeoning
   avatar: assets/img/bokyeoning.jpg
   favicon: assets/monitor.ico
   gravatar: # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
+  description: "bokyening blog" # used by search engines
 
   # Header and footer text
   header_text: >
-     <p>1일 1업로드를 목표로</p>
-     <p>bokyeoning blog</p>
+     <p>안녕 보경님이시다</p>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
@@ -68,6 +67,11 @@ theme_settings:
   # Post navigation
   post_navigation: false
 
+encoding: 'utf-8'
+# Configure the plugin here
+category_path: "category" # <- default value
+category_layout: "category.html" # <- default value
+
 # PAGINATION
 paginate: 5
 paginate_path: "blog/page:num"
@@ -78,7 +82,9 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-plugins: [jekyll-paginate]
+plugins: 
+  - jekyll-paginate
+  - jekyll-category-pages
 exclude:
   - Gemfile
   - Gemfile.lock

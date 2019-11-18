@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+  <dev class="posts-list">
+
+    {% assign category = page.category | default: page.title %}
+    {% for post in site.categories[category] %}
+
+        <h2>
+          <a href="{{ post.url | relative_url }}">
+              {{ post.title }}
+            </a>
+        </h2>
+          <p class="meta">
+            {{ post.date | date: "%B %-d, %Y" }}
+          </p>
+        </header>
+          <a class="button" href="{{ post.url | relative_url }}">
+            {{ site.theme_settings.str_continue_reading }}
+          </a>
+          
+    {% endfor %}
+    
+  </dev>
+

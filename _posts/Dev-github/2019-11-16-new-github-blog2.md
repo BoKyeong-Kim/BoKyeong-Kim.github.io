@@ -3,6 +3,7 @@ layout: post
 title: github.io 개인 블로그 만들기(2)
 feature-img: "assets/img/github-logo(1).png"
 subtitle: < github.io >
+categories : [Dev/github]
 tags: [github.io, gitblog, jekyll]
 ---
 

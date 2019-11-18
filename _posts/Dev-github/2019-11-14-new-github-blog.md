@@ -3,6 +3,7 @@ layout: post
 title: github.io 개인 블로그 만들기(1)
 feature-img: "assets/img/github-logo(1).png"
 subtitle: < jekyll >
+categories : [Dev/github]
 tags: [github.io, gitblog, jekyll]
 ---
 
@@ -13,7 +14,7 @@ tags: [github.io, gitblog, jekyll]
 
 
 ## github.io 블로그 만들기
-
+----------------
 ### Jekyll 설치하기
 
 * 터미널에서 RubyGems를 사용하여 jekyll을 설치한다.
@@ -62,7 +63,7 @@ Server running... press ctrl-c to stop.
 
 
 
-
+-----------------
 ### theme 적용하기
 
 (사실 깃블로그 테마때문에 계속 엎고 다시 적용하고를 반복했다.

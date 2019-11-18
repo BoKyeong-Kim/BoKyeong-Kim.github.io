@@ -1,0 +1,26 @@
+// Post listing
+.category-title {
+  clear:left;
+  padding-top: $padding-small*1.5;
+  text-align:center;
+}
+.posts-list {
+  @extend %padding-regular;
+  width: 100%;
+  margin-bottom: 0;
+  display: inline-block;
+  background-size: $feature-image-size;
+  border-bottom: 1px solid $link-color;
+  p a {
+    @extend .body-link;
+  }
+  clear:left;
+  padding-top: $padding-small;
+  list-style: square outside none;
+  li{
+    a{
+      font-weight: bold;
+    }
+  }
+
+}
