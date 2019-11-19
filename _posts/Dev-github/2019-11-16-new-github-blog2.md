@@ -11,10 +11,7 @@ tags: [github.io, gitblog, jekyll]
 
 이제 github에 업로드하여 github.io도메인을 가진 홈페이지를 만들어보려고한다.
 
-상단 이미지 출처 : https://www.zdnet.com/article/github-sued-for-aiding-hacking-in-capital-one-breach/
-
-
-
+<br>
 # github.io 생성하기
 ------------------
 
@@ -25,13 +22,13 @@ tags: [github.io, gitblog, jekyll]
 2) 오른쪽 상단에 **New** 버튼을 클릭
 
 3) 아래와 같은 화면이 표시되는데 **Repository name**에 **[github 사용자명].github.io**를 적은 뒤 아래에 **Create repository** 버튼 클릭
-
+<br>
 ![create_repo]({{ site.baseurl }}/assets/img/create_repo.png)
 
 4) 생성된 레파지토리를 확인할 수 있다. 
 
 
-
+<br>
 ## github upload
 
 1) 현재 위치를 bokyeong-kim.github.io 디렉터리에 둔다.
@@ -64,12 +61,12 @@ tags: [github.io, gitblog, jekyll]
 
 6) 검색창에 본인이 만들었던 [github 사용자명].github.io를 입력하여 접속하면 테마를 적용시킨 블로그가 나타난다.
 
-
+<br>
 
 끝! 
 
 
-
+<br>
 
 ### (추가) 리모트 저장소 추가하려면
 
@@ -85,15 +82,15 @@ tags: [github.io, gitblog, jekyll]
 
 
 
-
+<br>
 
 2) 아래의 명령을 실행하면 새로운 리모트가 추가된다.
 
 `git remote add 단축이름 복사한 URL` 
 
-
-##### 깃 블로그 진짜 완성! 
-#### 위와 같은 방식으로 계속 posting 해주면 된다! 
+<br>
+깃 블로그 진짜 완성! <br>
+위와 같은 방식으로 계속 posting 해주면 된다! 
 
 
 

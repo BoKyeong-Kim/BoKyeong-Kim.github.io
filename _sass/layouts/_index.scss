@@ -20,11 +20,12 @@
 .posts {
   .post-teaser {
     @extend %padding-regular;
-    width: 100%;
+    padding-top: $padding-small;
+    width: 800%;
     margin-bottom: 0;
     display: inline-block;
     background-size: $feature-image-size;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 0.3px solid $border-color;
     p a {
       @extend .body-link;
     }
