@@ -5,8 +5,12 @@ permalink: /about/
 feature-img: "assets/img/sample_feature_img_2.png"
 ---
 
-Type Theme is a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
+<p>안녕하세요. 김보경입니다.<p>
+<p>깃허브 READMD에 업로드하는 것 뿐만아니라 블로그에 정리해두면 좋을 것 같아 개설했습니다.<p>
 
-Head over to the [theme's documentation](https://rohanchandra.github.io/project/type/) for much more information about Type Theme or to install this theme on your own Jekyll site.
 
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
+<h2>1. career</h2>
+
+* 2019.06 ~ ing      - 한국교통연구원(KOTI) 인턴<p>
+
+* 2017.06 ~ 2017.08  - 한국전자통신연구원(ETRI) 인턴<p>
