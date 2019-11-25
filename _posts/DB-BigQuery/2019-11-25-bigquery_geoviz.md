@@ -30,8 +30,7 @@ ST_GEOGPOINT(longitude, latitude)
 <b>더 자세한 사항은 [표준 SQL의 지리 함수](https://cloud.google.com/bigquery/docs/reference/standard-sql/geography_functions?hl=ko) 참고!</b>
 
 
-더 자세한 사항은 [bigquerygeoviz](https://bigquerygeoviz.appspot.com/?hl=ko)에 들어가서 
-아래와 같은 코드를 작성하여 정류장의 위치를 지도에 표시해본다.
+[bigquerygeoviz](https://bigquerygeoviz.appspot.com/?hl=ko)에 들어가서 아래와 같은 코드를 작성하여 정류장의 위치를 지도에 표시해본다.
 <br>
 ![size_main]({{ site.baseurl }}/assets/img/geogPoint.png)
 <br>
