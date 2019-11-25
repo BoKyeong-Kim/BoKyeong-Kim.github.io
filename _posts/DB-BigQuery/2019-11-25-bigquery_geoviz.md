@@ -32,8 +32,9 @@ ST_GEOGPOINT(longitude, latitude)
 
 더 자세한 사항은 [bigquerygeoviz](https://bigquerygeoviz.appspot.com/?hl=ko)에 들어가서 
 아래와 같은 코드를 작성하여 정류장의 위치를 지도에 표시해본다.
+<br>
 ![size_main]({{ site.baseurl }}/assets/img/geogPoint.png)
-
+<br>
 한 사람의 이동 패턴을 보고 싶으면 그에 맞는 조건을 주어 쿼리문을 작성하여 Geo Viz에서 다루면 정류장 위치가 표시될 것이다!
 
 
