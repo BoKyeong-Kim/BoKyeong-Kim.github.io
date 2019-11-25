@@ -55,3 +55,15 @@ header {
     @extend %padding-regular;
   }
 }
+img[alt="size"] { 
+  max-width: 50%;
+  display :block; 
+  align : center;
+  margin: 0px auto;
+}
+img[alt="size_main"] { 
+  max-width: 85%;
+  display :block; 
+  align : center;
+  margin: 0px auto;
+}
