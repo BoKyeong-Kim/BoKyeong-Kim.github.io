@@ -3,7 +3,7 @@ layout: post
 title: 전공 정리
 subtitle: < D B 편 >
 feature-img: "assets/img/sample_feature_img_2.png"
-categories : [DB/Database]
+categories : [Data/Database]
 tags: [데이터베이스, 전공정리, 개발자면접]
 ---
 

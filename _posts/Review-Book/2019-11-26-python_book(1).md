@@ -1,0 +1,46 @@
+---
+layout: post
+title: 파이썬으로 만드는 서버리스 애플리케이션
+feature-img: "assets/img/sample_feature_img_2.png"
+categories : [Review/Book]
+tags: [Review, Book, python,클라우드 컴퓨팅,Serverless,책리뷰]
+---
+
+**파이썬으로 만드는 서버리스 애플리케이션**[24시간 사용 가능한 효율적인 웹 애플리케이션 개발]
+
+* 원서명 - Building Serverless Applications with Python: Develop fast, scalable, and cost-effective web applications that are always available (ISBN 9781787288676)
+* 지은이 - 잘렘 라지 로히트(Jalem Raj Rohit)
+* 옮긴이 - 김성준
+* ISBN : 9791161752235
+* 가격 : 25,000원
+* 2018년 10월 29일 펴냄
+* 시리즈 : acorn+PACKT, 클라우드 컴퓨팅
+
+
+![rotate]({{ site.baseurl }}/assets/img/serverlessbook.png)
+
+<br>
+대상 : 애저(Azure)나 아마존 웹 서비스(AWS) 같은 클라우드 기반 플랫폼에서 서버리스 아키텍처를 공부하려는 파이썬 개발자 (파이썬에 대한 지식은 디폴트)
+
+
+서버리스 엔지니어링, 서버리스 아키텍쳐가 무엇인지 배워보고 싶어서 책을 구매하게 되었다!
+(그리고 클라우드 환경을 더 잘다뤄보고 싶은 욕심도 있다)
+
+
+### 목차
+
+![rotate]({{ site.baseurl }}/assets/img/ch1.jpeg)
+
+
+![rotate]({{ site.baseurl }}/assets/img/ch2.jpeg)
+
+
+![rotate]({{ site.baseurl }}/assets/img/ch3.jpeg)
+
+
+목차는 위와 같이 구성되어있고 한번 다뤄보면 큰 깨달음을 얻을 것 같다!
+
+더 자세한 정보는 [acornpub](http://www.acornpub.co.kr/book/serverless-app-python
+)에서 확인할 수 있다.
+
+파이팅!!

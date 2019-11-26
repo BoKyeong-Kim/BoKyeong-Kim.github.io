@@ -61,6 +61,13 @@ img[alt="size"] {
   align : center;
   margin: 0px auto;
 }
+img[alt="rotate"] { 
+  max-width: 50%;
+  display :block; 
+  align : center;
+  margin: 0px auto;
+  transform: rotate(90deg);
+}
 img[alt="size_main"] { 
   max-width: 85%;
   display :block; 

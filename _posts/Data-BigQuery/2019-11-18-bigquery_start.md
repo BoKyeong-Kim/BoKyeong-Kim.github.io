@@ -3,7 +3,7 @@ layout: post
 title: 빅쿼리(BigQuery) 환경 셋팅하기
 subtitle: < GCP >
 feature-img: "assets/img/sample_feature_img_2.png"
-categories : [DB/BigQuery]
+categories : [Data/BigQuery]
 tags: [BigQuery,google,GCP]
 ---
 
