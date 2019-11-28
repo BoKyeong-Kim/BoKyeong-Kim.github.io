@@ -3,7 +3,7 @@ layout: post
 title: 파이썬으로 만드는 서버리스 애플리케이션
 feature-img: "assets/img/sample_feature_img_2.png"
 categories : [Review/Book]
-tags: [Review, Book, python,클라우드 컴퓨팅,Serverless,책리뷰]
+tags: [Review, Book, python,클라우드 컴퓨팅,Serverless,책리뷰, 파이썬으로 만드는 서버리스 애플리케이션]
 ---
 
 **파이썬으로 만드는 서버리스 애플리케이션**[24시간 사용 가능한 효율적인 웹 애플리케이션 개발]
