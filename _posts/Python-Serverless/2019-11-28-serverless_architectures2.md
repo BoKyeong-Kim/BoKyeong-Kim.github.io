@@ -93,7 +93,7 @@ Lambda 함수는 사용자가 제공한 코드, 관련 종속성 및 구성으�
 ![size_main]({{ site.baseurl }}/assets/img/testevent.png)
 
 
-함수가 성공적으로 실행되면, 콘솔애서 결과를 확인한다.
+함수가 성공적으로 실행되면, 콘솔에서 결과를 확인한다.
 
 <br>
 
@@ -102,6 +102,8 @@ Lambda 함수는 사용자가 제공한 코드, 관련 종속성 및 구성으�
 테스트를 반복하여 클릭하면 지표가 생성된다. 모니터링 탭을 선택하여 Lambda함수의 지표를 확인한다.
 Lambda 지표는 Amazon CloudWatch를 통해 보고되며 이 지표를 활용하여 사용자 정의 경보를 설정할 수 있다. CloudWatch에 대한 자세한 내용은 더 자세한 정보는 [Amazon CloudWatch Developer Guide](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatch.html
 )에서 확인할 수 있다.
+<br>
+
 ![size_main]({{ site.baseurl }}/assets/img/testmonitor.png)
 
 AWS Lambda를 사용하면 사용한 만큼만 비용을 지불한다.
