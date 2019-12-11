@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 빅쿼리(BigQuery) 다루기(1)
+title: 빅쿼리(BigQuery) 다루기(CASE문)
 subtitle: < Data upload >
 feature-img: "assets/img/sample_feature_img_2.png"
 categories : [Data/BigQuery]
@@ -85,3 +85,4 @@ CASE 문은 CASE 뒤에 ‘WITH 조건식 THEN 조건을 만족할 때의 값을
 
 
 > CASE문은 데이터변환에 가장 많이 사용되니까 확실하게 기억하기!
+
