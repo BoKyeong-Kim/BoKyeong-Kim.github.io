@@ -60,3 +60,6 @@ URL을 로그 데이터로 저장해두었으면 URL경로를 가공해서 리�
 
  BigQuery는 re2 라이브러리를 사용하여 정규 표현식을 지원한다. 더 자세한 정규 표현식 구문은
 [Syntax](https://github.com/google/re2/wiki/Syntax) 참고!
+<br>
+
+**이번 포스팅 끝!!**
