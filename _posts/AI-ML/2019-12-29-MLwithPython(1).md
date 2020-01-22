@@ -253,13 +253,92 @@ target:
 ```
 
 
+<br>
+
+#### 1-2)성과측정 : 훈련데이터와 테스트 데이터
+
+- 이 데이터로 머신러닝 모델을 만들고 새로운 데이터의 품종을 예측하려한다.
+- 만든 모델을 새 데이터에 적용하기 전에 이 모델이 진짜 잘 작동하는지 알아야한다.(신뢰할 수 있는지)
+- 모델을 만들 때 사용한 데이터는 평가 목적으로 사용할 수 없다.(오버피팅!!)
+- 모델이 훈련데이터를 전부 기억할 수 있다. 데이터를 기억한다는 것은 모델을 잘 **일반화**하지 않았다는 뜻.
+
+- 모델의 성능을 측정하려면 레이븛을 알고 있는 새 데이터를 모델에 적용해봐야한다. 
+    - 훈련 데이터(train data) : 머신러닝 모델을 만들 때 사용
+    - 테스트 데이터(test data) : 모델이 얼마나 잘 작동하는지 측정할 때 사용
+
+<br>
+
+- scikit-learn은 데이터셋을 섞어서 나눠주는 train_test_split 함수를 제공
+- 일반적으로 train data 75%, test data 25%로 나눠서 사용한다.(상황에 따라 다를 수 있다.)
+- scikit-learn에서 **데이터(2차원 배열-행렬)는 대문자 X**로 표시, **레이블(1차원 배열-벡터)은 소문자 y**로 표기
+
+<br>
 
 ```python
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(
+    iris_datasets['data'], iris_datasets['target'], random_state=0)
+```
 
+- train_test_split 함수의 반환값은 X_train, X_test, y_train, y_test이며 모두 Numpy 배열.
+- train_test_split 함수로 데이터를 나누기 전에 유사 난수 생성기를 사용하여 데이터 셋을 무작위로 섞어야한다.
+
+
+<br>
+
+```python
+print("X_train의 shape {}".format(X_train.shape))
+print("y_train의 shape {}".format(y_train.shape))
+print('-----------------------')
+print("X_test의 shape {}".format(X_test.shape))
+print("y_test의 shape {}".format(y_test.shape))
 ```
 
 ```
-
+X_train의 shape (112, 4)
+y_train의 shape (112,)
+-----------------------
+X_test의 shape (38, 4)
+y_test의 shape (38,)
 ```
+
+<br>
+
+#### 1-3) 가장 먼저 할 일 : 데이터 살펴보기 
+
+
+- 머신러닝 모델을 만들기 전에 머신러닝이 없이도 풀 수 있는 문제는 아닌지, 혹은 필요한 정보가 누락되지 않았는지 데이터를 조사해보는것이 좋다.
+- 또한 데이터를 탐색하면서 비정상적인 값이나 특이한 값을 찾을 수도 있다.(일관성이 없거나 범위가 다른 경우 등)
+- 시각화는 데이터를 조사하는 가장 좋은 방법
+
+<br>
+
+#### 산점도 
+- 데이터에서 한 특성을 x축에 놓고 다른 하나는 y축에 놓아 각 데이터 포인트를 하나의 점으로 나타내는 그래프
+- 모든 특성을 짝지어 만드는 **산점도 행렬**을 사용할 수 있다.
+- 하지만 산점도 행렬은 한 그래프에 모든 특성의 관계가 나타나는 것이 아니기 때문에 각각의 나누어진 산점도 그래프에는 드러나지 않은 중요한 성질이 있을 수도 있다.
+
+
+<br>
+
+데이터 포인트의 색은 붓꽃의 품종에 따라 구분.
+- 1) X_train 데이터를 사용하여 데이터 프레임 생성
+- 2) 열의 이름은 iris_datasets.feature_names에 있는 문자열을 사용
+- 3) 데이터 프레임을 사용해 y_train에 따라 색으로 구분된 산점도 행렬을 만든다.
+
+
+```python
+iris_df = pd.DataFrame(X_train, columns=iris_datasets.feature_names)
+
+iris_df.head()
+```
+
+
+![size_main]({{ site.baseurl }}/assets/img/iris_feature_name.png)
+<br>
+
+
+
+
 
 
