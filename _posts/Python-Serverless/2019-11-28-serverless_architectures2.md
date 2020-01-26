@@ -112,7 +112,7 @@ AWS Lambda를 사용하면 사용한 만큼만 비용을 지불한다.
 
 #### 6)Lambda 함수 삭제
 
-Lambda 함수를 유지하는데 바용이 부과되지않으므로 콘솔에서 함수를 쉽게 삭제할 수 있다.
+Lambda 함수를 유지하는데 비용이 부과되지않으므로 콘솔에서 함수를 쉽게 삭제할 수 있다.
 
 
 ![size_main]({{ site.baseurl }}/assets/img/deletefunc.png)
