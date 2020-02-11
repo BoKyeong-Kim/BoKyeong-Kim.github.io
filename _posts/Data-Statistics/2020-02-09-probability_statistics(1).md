@@ -3,6 +3,9 @@ layout: post
 title: 확률과 통계
 subtitle: < probability and statistics >
 feature-img: "assets/img/sample_feature_img_2.png"
+sitemap :
+changefreq : daily
+priority : 1.0
 categories : [Data/Statistics]
 tags: [데이터, 통계, 확률과 통계, 합의법칙, 곱의법칙]
 ---

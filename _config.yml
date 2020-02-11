@@ -1,6 +1,5 @@
 # SITE CONFIGURATION
-baseurl: ""
-url: "https://BoKyeong-Kim.github.io/"
+url: "http://BoKyeong-Kim.github.io/"
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
@@ -19,7 +18,7 @@ theme_settings:
    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
 
   # Icons
-  rss: false
+  rss: True
   email_address: bokyeong3659@gmail.com # Full email address, e.g. "sam@example.com"
   behance:
   bitbucket:
@@ -83,6 +82,7 @@ sass:
   sass_dir: _sass
   style: :compressed
 plugins: 
+  - jekyll-sitemap
   - jekyll-paginate
   - jekyll-category-pages
 exclude:
