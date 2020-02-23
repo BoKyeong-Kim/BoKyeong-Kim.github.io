@@ -379,6 +379,12 @@ knn = KNeighborsClassifier(n_neighbors=1)
 knn.fit(X_train, y_train)
 ```
 
+```
+KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=None, n_neighbors=1, p=2,
+                     weights='uniform')
+```
+
 - fit 메서드는 knn 객체 자체를 반환한다.(knn 객체가 문자열 형태로 출력)
 - 출력에서 모델을 생성할 때 사용한 매개변수를 볼 수 있다. (거의 모든 매개변수가 기본값이고 n_neighbors=1 는 우리가 지정한 값)
 - **scikit-learn 모델들이 많은 매개변수를 가지고 있지만 대부분은 성능을 최적화하거나 특별한 목적으로 사용**
@@ -387,8 +393,77 @@ knn.fit(X_train, y_train)
 
 
 
+#### 1-5) 예측하기 
+- 이 모델을 사용해서 정확한 레이블을 모르는 새 데이터에 대해 예측을 만들 수 있다.
+- 야생에서 꽃받침의 길이가 5cm, 폭이 2.9cm이고 꽃잎의 길이가 1cm, 폭이 0.2cm인 붓꽃을 보았다고 가정
+    - 이 붓꽃의 품종은 무엇일까?
+- 이 측정값을 Numpy 배열, 즉 샘플의 수(1), 특성의 수(4)를 곱한 크기의 Numpy 배열로 만들려고한다. 
+
+```python
+X_new = np.array([[5, 2.9, 1, 0.2]])
+print('X_new.shape : {}'.format(X_new.shape))
+```
+
+```
+X_new.shape : (1, 4)
+```
+
+<br>
+
+- 붓꽃 하나의 측정값은 2차원 Numpy의 행(row)으로 들어간다.
+- scikit-learn은 항상 데이터가 2차원 배열일 것으로 예상한다.
+
+예측에는 knn 객체의 predict 매서드를 사용
+
+```python
+prediction = knn.predict(X_new)
+print("예측 : {}".format(prediction))
+print("예측한 타겟의 이름: {}".format(
+    iris_datasets['target_names'][[prediction]]))
+```
+
+```
+예측 : [0]
+예측한 타겟의 이름: ['setosa']
+```
+
+- 우리가 만든 모델이 새로운 붓꽃을 setosa 품종을 의미하는 클래스 0으로 예측.
+- 이 모델의 결과를 어떻게 신뢰할 수 있을까?
+    - 이 샘플의 정확한 품종을 모른다는 사실이 모델을 구축하는 데 있어서 중요한 의미를 가진다.
+
+<br>
+
+#### 1-6) 모델 평가하기
+
+- 앞에서 만든 테스트 세트를 사용
+    - 이 데이터는 모델을 만들 때 사용하지 않았고 테스트 세트에 있는 각 붓꽃의 품종을 정확히 알고 있다.
+- 테스트 데이터에 있는 붓꽃의 품종을 예측하고 실제 레이블(품종)과 비교할 수 있다.
+- 얼마나 많은 붓꽃 품종이 정확히 맞았는지 정확도를 계산하여 모델의 성능을 평가
 
 
+```python
+y_pred = knn.predict(X_test)
+print("테스트 세트에 대한 예측값: \n{}".format(y_pred))
+```
+```
+테스트 세트에 대한 예측값: 
+[2 1 0 2 0 2 0 1 1 1 2 1 1 1 1 0 1 1 0 0 2 1 0 0 2 0 0 1 1 0 2 1 0 2 2 1 0 2]
+```
+
+knn 객체의 score 메서드로 테스트 세트의 정확도를 계산할 수 있다.
+
+```python
+print("테스트 세트의 정확도: {:.2f}".format(knn.score(X_test, y_test)))
+```
+```
+테스트 세트의 정확도: 0.97
+```
+
+- 이 모델의 테스트 세트에 대한 정확도는 약 0.97이다. 
+    - 테스트 세트에 포함된 붓꽃 중 97%의 품종을 정확히 맞췄다는 뜻
+    - 이 결과 이 모델은 새로운 붓꽃에 대한 정확도가 97%일 것이라 기대할 수 있다.
+
+#### fit, predict, score 메서드는 scikit-learn 지도학습 모델의 공통 인터페이스
 
 
 
