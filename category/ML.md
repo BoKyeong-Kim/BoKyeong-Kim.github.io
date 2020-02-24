@@ -1,6 +1,5 @@
 ---
 layout: category
-User-agent : *
-title : 
-permalink : 
+title : AI/ML
+permalink : '/AI/ML'
 ---
