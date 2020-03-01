@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 통계 - 가설설정
-subtitle: < 가설설정 >
+title: 기초통계(1) - 가설설정
+subtitle: < 가설,오류,모집단,표본설정,확률분포,유의수준 >
 feature-img: "assets/img/sample_feature_img_2.png"
 sitemap :
 changefreq : daily
@@ -11,7 +11,10 @@ tags: [데이터, 통계, 가설, 오류, 모집단, 표본설정, 확률분포,
 ---
 
 
-**통계 - 가설설정**
+- 가설과 오류
+- 모집단과 표본설정
+- 확률분포와 검정통계량
+
 
 <br>
 
