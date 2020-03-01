@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 기초통계(1) - 가설설정
+title: 기초통계(1)
 subtitle: < 가설,오류,모집단,표본설정,확률분포,유의수준 >
 feature-img: "assets/img/sample_feature_img_2.png"
 sitemap :
