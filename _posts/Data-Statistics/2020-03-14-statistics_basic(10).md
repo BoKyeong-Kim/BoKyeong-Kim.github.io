@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 기초통계(10)
-subtitle: < 분석모델 확장>
+subtitle: < 분석모델 확장 >
 feature-img: "assets/img/sample_feature_img_2.png"
 sitemap :
 changefreq : daily
