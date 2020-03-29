@@ -290,7 +290,7 @@ tags: [데이터, 통계, 확률, 확률분포, 확률밀도함수, 확률질량
 -------------
 
 * 출처 : 통계 기반 데이터 분석 강의 [https://e-koreatech.step.or.kr/page/lms/learning?m1=home%25&course_id=100168%25](https://e-koreatech.step.or.kr/page/lms/learning?m1=home%25&course_id=100168%25)
-
+- 참고 : 통계학 도감(쿠리하라 신이치)
 
 
 
