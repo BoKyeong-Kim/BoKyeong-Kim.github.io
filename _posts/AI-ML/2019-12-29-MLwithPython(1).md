@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ML with Python(1)
-subtitle: < 파이썬 라이브러리를 활용한 머신러닝 >
+subtitle: < 데이터 적재 ,k-NN, 모델평가 >
 feature-img: "assets/img/sample_feature_img_2.png"
 categories : [AI/ML]
 tags: [AI,ML, machine learing, python]
