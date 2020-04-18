@@ -24,16 +24,16 @@ tags: [AI,ML, machine learing, python]
 <br>
 
 ### 2-1) 분류와 회귀
-#### 분류(classification) : 미리 정의된, 가능성 있는 여러 클래스 레이블 중 하나를 예측하는 것
+- 분류(classification) : 미리 정의된, 가능성 있는 여러 클래스 레이블 중 하나를 예측하는 것
     - 이진 분류 : 두 개의 클래스로 분류 (Y/N)
     - 다중 분류 : 셋 이상의 클래스로 분류
-#### 회귀(regression) : 연속적인 숫자, 또는 프로그래밍 용어로 말하면 부동소수점수(실수)를 예측하는 것
+- 회귀(regression) : 연속적인 숫자, 또는 프로그래밍 용어로 말하면 부동소수점수(실수)를 예측하는 것
     - 출력 값에 연속성이 있는지 = 예상 출력 값 사이에 연속성이 있다면 회귀 문제
 
 <br>
 
 ### 2-2) 일반화, 과대적합, 과소적합
-#### 일반화(generalization) : 모델이 처음 보는 데이터에 대해 정확하게 예측할 수 있을 때 이를 훈련 셋 에서 테스트 셋으로 일반화 되었다고 한다.
+- 일반화(generalization) : 모델이 처음 보는 데이터에 대해 정확하게 예측할 수 있을 때 이를 훈련 셋 에서 테스트 셋으로 일반화 되었다고 한다.
     - 그래서 모델을 만들 때에는 가능한 정확하게 일반화되도록 해야한다.
 - 보통 훈련 셋에 대해 정확히 예측하도록 모델을 구축.
 - 아주 복잡한 모델을 만든다면 훈련셋에만 정확한 모델이 되어버릴수도 있다.**(오버피팅)**
@@ -43,7 +43,7 @@ tags: [AI,ML, machine learing, python]
         - 그렇게 되면 데이터의 다양성을 잡아내지 못할 것이고 훈련셋에도 맞지 않는다.
         
 - 모델을 복잡하게 할수록 훈련 데이터에 대해서는 정확히 예측할 수 있다. 하지만 너무 복잡해지면 훈련셋에 각 데이터 포인트에 민감해져 새로운 데이터에 일반화되지 못한다.
-##### **우리가 찾으려는 모델은 일반화 성능이 최대가 되는 최적점에 있는 모델**
+- **우리가 찾으려는 모델은 일반화 성능이 최대가 되는 최적점에 있는 모델**
 
 <br>
 
@@ -119,6 +119,8 @@ Text(0, 0.5, '타깃')
 - 특성이 적은 데이터셋(저차원 데이터셋)에서 얻은 직관이 특성이 많은 데이터셋(고차원 데이터셋)에서 그대로 유지되지 않을 수 있다.
 - 알고리즘을 배울때 저차원 데이터셋을 사용하는 것이 좋다.
 
+<br>
+
 #### scikit-learn에 들어있는 실제 데이터셋 사용
 - 1) 위스콘신 유방암 데이터셋(Wisconsin Breast Cancer) : 유방암 종양의 임상 데이터 기록
     - 양성(해롭지 않은 종양)과 악성(암 종양)으로 레이블링 되어있고, 조직 데이터 기반으로 종양이 악성인지를 예측할 수 있도록 학습하는 것이 과제.
@@ -127,7 +129,7 @@ Text(0, 0.5, '타깃')
 
 <br>
 
-**-- Wisconsin Breast Cancer --**
+### Wisconsin Breast Cancer
 
 ```python
 from sklearn.datasets import load_breast_cancer
@@ -321,11 +323,14 @@ print('특성 이름:\n{}'.format(cancer.feature_names))
  'worst concave points' 'worst symmetry' 'worst fractal dimension']
  ```
 
+
  <br>
 
- **-- Boston Housing --**
 
- ```python
+### Boston Housing
+
+
+```python
  from sklearn.datasets import load_boston
 boston = load_boston()
 print("데이터의 형태: {}".format(boston.data.shape))
@@ -378,8 +383,11 @@ forge 데이터셋에 대한 1-최근접 이웃, 3-최근접 이웃 모델의 �
 ```python
 mglearn.plots.plot_knn_classification(n_neighbors=3)
 ```
+<br>
 
 ![size_main]({{ site.baseurl }}/assets/img/knn(2).png)
+
+<br>
 
 - 둘 이상의 이웃을 선택할 때는 레이블을 정하기 위해 투표한다.
 - 테스트 포인트 하나에 대해 클래스 0에 속한 이웃이 몇 개인지, 클래스 1에 속한 이웃이 몇 개인지를 세고 이웃이 더 많은 클래스로 레이블을 지정한다.
@@ -403,6 +411,8 @@ clf = KNeighborsClassifier(n_neighbors=3)
 
 - 훈련 세트를 사용하여 분류 모델 학습
 - KNeighborsClassifier에서의 학습은 예측할 때 이웃을 찾을 수 있도록 데이터를 저장하는 것
+
+<br>
 
 ```python
 clf.fit(X_train, y_train)
@@ -466,6 +476,8 @@ for n_neighbors, ax in zip([1,3,9], axes):
 axes[0].legend(loc=3)
 ```
 
+<br>
+
 ![size_main]({{ site.baseurl }}/assets/img/kneighbors.png)
 
 <br>
@@ -484,6 +496,7 @@ axes[0].legend(loc=3)
 
 ------------------------------
 
+<br>
 
 #### k-최근접 이웃 회귀
 - k-최근접 이웃 알고리즘은 회귀 분석에도 쓰인다. 
@@ -504,6 +517,8 @@ mglearn.plots.plot_knn_regression(n_neighbors=1)
 ```python
 mglearn.plots.plot_knn_regression(n_neighbors=3)
 ```
+
+<br>
 
 ![size_main]({{ site.baseurl }}/assets/img/knn_regression(2).png)
 
@@ -608,7 +623,7 @@ axes[0].legend(['모델 예측','훈련 데이터/타깃','테스트 데이터/�
     - 수백 개 이상의 많은 특성을 가진 데이터셋에는 잘 작동하지 않고, 특성값이 대부분이 0인 데이터셋은 잘 작동하지 않는다.
 
 
-# 끝!
+### 끝!
 
 
 
