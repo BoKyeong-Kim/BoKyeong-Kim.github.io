@@ -586,6 +586,8 @@ for n_neighbors, ax in zip([1,3,9], axes):
 axes[0].legend(['모델 예측','훈련 데이터/타깃','테스트 데이터/타깃'], loc='best')
 ```
 
+<br>
+
 ![size_main]({{ site.baseurl }}/assets/img/knn_regression(3).png)
 
 
