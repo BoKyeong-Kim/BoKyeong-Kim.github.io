@@ -40,9 +40,7 @@ tags: [git, github, install, git설치]
 <br>
 
 5.
-
 - Use the OpenSSL library : OpenSSL 라이브러리를 사용
-
 - Use the native Windows Secure Channel library : Windows 인증서 라이브러리를 사용
 
 ![size_main]({{ site.baseurl }}/assets/img/gitsetup4.png)
