@@ -34,6 +34,9 @@ ST_GEOGPOINT(longitude, latitude)
 <br>
 ![size_main]({{ site.baseurl }}/assets/img/geogPoint.png)
 <br>
-한 사람의 이동 패턴을 보고 싶으면 그에 맞는 조건을 주어 쿼리문을 작성하여 Geo Viz에서 다루면 정류장 위치가 표시될 것이다!
+한 사람의 이동 패턴을 보고 싶으면 그에 맞는 조건을 주어 쿼리문을 작성하여 Geo Viz에서 다루면 정류장 위치가 표시될 것이다.
+
+<br>
 
 
+Bigquery GeoViz 사용하기 끝

@@ -84,5 +84,5 @@ GoogleCloudPlatform 옆에 프로젝트를 선택할 수 있는 버튼과
 ![size_main]({{ site.baseurl }}/assets/img/auto_from.png)
 <br>
 
-<h4>빅쿼리 환경 셋팅 끝!</h4>
+<h4>빅쿼리 환경 셋팅 끝</h4>
 
