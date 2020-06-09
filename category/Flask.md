@@ -1,5 +1,5 @@
 ---
 layout: category
-title : Python/Flask
-permalink: '/Python/Flask'
+title : Python/flask
+permalink: '/Python/flask'
 ---
