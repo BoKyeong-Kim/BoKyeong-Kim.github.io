@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Python Dictionary
-subtitle: < 딕셔너리 >
+title: Python 딕셔너리
+subtitle: < Dictionary >
 feature-img: "assets/img/sample_feature_img_2.png"
 categories : [Python/Basic]
 tags: [python, basic, 기초, 딕셔너리, Dictionary]
