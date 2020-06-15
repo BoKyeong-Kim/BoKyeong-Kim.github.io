@@ -130,6 +130,7 @@ sheet.max_row
 sheet.max_column
 >>> 3
 ```
+
 - Worksheet 객체의 max_row와 max_column로 시트의 크기를 판단할 수 있다.
 
 
@@ -236,6 +237,7 @@ for cellObj in list(sheet.columns)[1]:
     Bananas
     Strawberries
 ```
+
 - Worksheet 객체의 rows 속성을 사용하면 튜플의 튜플을 얻는다.(column도 동일)
     - 이들 각 내부 튜플은 각자 한 행을 나타내고, 그 행의 cell객체를 포함한다.
 - example.xlsx 는 7행 3열로 이루어져있기 때문에 rows는 7개의 튜플(각각 3개의 cell객체를 포함)로 구성된 튜플이며, columns는 3개의 튜플(각각 7개의 cell객체를 포함)로 구성된 튜플
@@ -246,6 +248,7 @@ for cellObj in list(sheet.columns)[1]:
 <br>
 
 #### 엑셀 문서 만들기
+
 ```python
 import openpyxl
 
@@ -271,6 +274,7 @@ wb.get_sheet_names()
 <br>
 
 #### 시트 만들고 없애기
+
 ```pthon
 import openpyxl
 
@@ -303,13 +307,14 @@ wb.get_sheet_names()
 <br>
 
 #### 셀에 값 쓰기
+
 ```python
 import openpyxl
 
 wb = openpyxl.Workbook()
 sheet = wb.get_sheet_by_name('Sheet1')
 sheet['A1'] = 'Hello world!'
-heet['A1'].value
+sheet['A1'].value
 >>> 'Hello world!'
 ```
 
