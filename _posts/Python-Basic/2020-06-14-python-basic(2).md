@@ -12,8 +12,6 @@ tags: [python, basic, 기초, 엑셀, openpyxl]
     - get_column_letter()
     - column_index_from_string()
 
-
-
 <br>
 
 
