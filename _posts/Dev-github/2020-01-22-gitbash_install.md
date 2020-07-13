@@ -14,7 +14,7 @@ tags: [git, github, install, git설치]
 1.git 홈페이지에 접속하여 [다운로드](https://git-scm.com/downloads)를 클릭
 
 
-![size_main]({{ site.baseurl }}/assets/img/gitdown.PNG)
+![size_main]({{ site.baseurl }}/assets/img/gitinstall.png)
 
 
 - 본인에게 맞는 OS를 선택하여 설치한다.
@@ -83,13 +83,13 @@ git config --globall user.email '이메일'
 9.기존에 깃에 올려두었던 파일을 pull한다.
 깃허브 레파지토리에 들어가서 아래의 화면처럼 우측에 **Clone or download**를 클릭하여 주소 옆에 노트와화살표 아이콘을 클릭하여 주소를 복사한다.
 
-![size_main]({{ site.baseurl }}/assets/img/gitpull.PNG)
+![size_main]({{ site.baseurl }}/assets/img/gitclone.png)
 
 <br>
 
 10.그리고 아래와 같이 git pull을 작성한 뒤 뒤에 복사한 주소를 붙여넣으면 깃허브에 올라가있던 것들을 다운받을 수 있다. 
 
-![size_main]({{ site.baseurl }}/assets/img/gitbash2.PNG)
+![size_main]({{ site.baseurl }}/assets/img/gitbashed.png)
 
 
 <br> 
