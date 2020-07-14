@@ -75,7 +75,7 @@ init을 한번 더해서 Reinitalized라고 뜨는 것,,, <br>
 ```git 
 git config --global user.name '이름'
 
-git config --globall user.email '이메일'
+git config --global user.email '이메일'
 ```
 
 <br>
