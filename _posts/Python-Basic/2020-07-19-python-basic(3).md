@@ -7,7 +7,7 @@ categories : [Python/Basic]
 tags: [python, basic, 기초, 시간함수, time, datetime]
 ---
 
-파이썬 시간함수 정리
+- 파이썬 시간함수 정리
     - time
     - datetime
     - timedelta
@@ -18,7 +18,7 @@ tags: [python, basic, 기초, 시간함수, time, datetime]
 #### 파이썬 시간함수
 파이썬에서 날짜와 시간은 몇 가지 다른 데이터 유형 및 함수와 연관될 수 있다.
 
-##### 시간을 나타내는데 사용되는 유형
+##### 1. 시간을 나타내는데 사용되는 유형
 - 유닉스 시간 기점 타임스탬프(time 모듈에서 사용)는 UTC기준 1970년 1월 1일 자정으로부터 경과된 초수를 뜻하는 부동소수점 또는 정수값
 - datetime 객체(datetime 모듈)
     - year, month, day, hour, minute, second 속성에 저장된 정수값을 가짐
@@ -27,7 +27,7 @@ tags: [python, basic, 기초, 시간함수, time, datetime]
 
 <br>
 
-##### 시간함수와 매개변수 및 돌려받는 값 정리
+##### 2. 시간함수와 매개변수 및 돌려받는 값 정리
 - time.time()
     - 현재 시각 시간 기점 타임스탬프의 부동소수점 값을 알려줌
 - time.sleep(seconds)
