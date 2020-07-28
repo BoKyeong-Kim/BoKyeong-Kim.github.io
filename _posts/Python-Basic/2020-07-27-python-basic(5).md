@@ -63,3 +63,46 @@ imap_obj.login('email_address@gmail.com', 'MY_SECRET_PASSWORD')
 <br>
 
 
+#### 이메일 검색하기
+- 로그인 후, 이메일을 가져오기 위해서 두 단계를 거쳐야한다.
+    - 1) 검색할 폴더 선택
+    - 2) IMAPClient 객체의 search() 메소드 호출 : IMAP 검색어 문자열 전달
+
+
+<br>
+
+#### 1)폴더 선택하기
+- 거의 모든 계정은 기본적으로 받은 편지함 폴더를 가지고 있지만, IMAPClient 객체의 list_folders() 메소드를 불러서 폴더의 목록을 얻을 수도 있다.
+    - 반환 : 튜플의 리스트
+    - 각 튜플은 하나의 폴더에 대한 정보를 포함하고 있다.
+
+```python
+import pprint
+pprint.pprint(imap_obj.list_folders())
+>> [(('\\HasNoChildren',), '/', 'Drafts'),
+    (('\\HasNoChildren',), '/', 'Filler'),
+    (('\\HasNoChildren',), '/', 'INBOX'),
+    (('\\HasNoChildren',), '/', 'Sent'),
+    --snip--
+    (('\\HasNoChildren', '\\Flagged'), '/', 'Starred'),
+    (('\\HasNoChildren', '\\Trash'), '/', 'Trash')]
+```
+
+- 지메일 계정이 있다면 출력은 위와 비슷할 것이다.
+    - 지메일은 폴더를 라벨이라고 부르지만 폴더와 같은 방식으로 사용된다.
+- 각 튜플에는 세가지 값이 있다.
+    - ex. (('\\HasNoChildren',), '/', 'INBOX')
+        - 1) 폴더의 플래그 튜플
+        - 2) 이름 문자열에서 상위폴더와 하우ㅏ폴더를 구분하는데 쓰이는 문자
+        - 3) 폴더 전체의 이름
+- 검색할 폴더를 선택하려면 IMAPClient 개체의 select_folders()메소드에 문자열로 폴더의 이름을 전달한다.
+```python
+imap_obj.select_folders('INBOX', readonly=True)
+```
+- 선택한 폴더가 없는 경우 파이썬은 imaplib.error를 일으킨다. 
+- readonly = True 키워드 매개변수는 그 이후로 다른 메소드를 호출할 때 이 폴더 안에 있는 이메일을 실수로 변경하거나 지우는 사고를 막아준다.(이메일을 지울목적이 아니라면 readonly=True는 필수)
+
+
+
+
+
