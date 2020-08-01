@@ -139,7 +139,58 @@ import imaplib
 imaplib._MAXLINE = 10000000
 ```
 
+<br>
 
+#### 읽은 메일로 표시하기
+- UID 리스트를 받았다면 IMAPClient 객체의 fetch() 메소드를 호출해서 실제 이메일 내용을 가져올 수 있다.
+- UID 리스트는 fetch()의 첫 번째 매개변수가 되고 두번째 매개변수는 ['BODY[]'] 리스트 이다. 이는 fetch()에게 지정한 UID 리스트에 해당하는 이메일의 모든 본문 내용을 가져오라고 지시하는 의미이다.
 
+```python
+import pprint
+raw_msg = imap_obj.fetch(UIDs, ['BODY[]'])
+pprint.pprint(raw_msg)
+>> defaultdict(<class 'dict'>,
+            {6: {b'BODY[]': b'Delivered-To: bokyeong3659@gmail.com\r\nReceiv'
+                            b'ed: by 10.181.80 with SMTP id c16csp164y'
+                            b'wk;\r\n        Mon, 26 Jun 2017 05:46:07 -0700'
+                            b' (PDT)\r\nX-Received: by 10.37.73 with SMT'
+                            b'P id c9mr252ybj.144.1498467372;\r\n      '
+                            ...
+                            b'tml>\r\n--94eb2c0998ef0552dc5516--\r\n',
+                 b'SEQ': 6}})
+```
+- 출력값은 중첩된 딕셔너리 값으로, 사전의 키 값은 메세지의 UID이다.
+- 각 메세지는 두 개의 키, 'BODY[]' 및 'SEQ'를 가진 사전에 저장된다.
+- 'BODY[]' 키는 이메일의 실제 본문에 대응된다. 
+    - 메세지의 내용은 IMAP 서버가 읽어들이기 위한 목적으로 설계된 RFC 822라는 형식이라 한다.
+    - pyzmail 모듈을 사용하면 해당 메세지를 볼 수 있다.
+
+<br>
+
+#### pyzmail 사용
+- pyzmail 모듈은 원시 메세지를 분석하고 결과를 PyzMessage 객체로 돌려주며, 이 객체를 사용하면 제목, 본문, 발신 및 수신 주소 등을 알 수 있다.
+
+```python
+import pyzmail
+msg = pyzmail.Pyzmessage.factory(raw_msg[6]['BODY[]'])
+```
+
+- pyzmail 모듈을 가져온 후, pyzmail.Pyzmessage.factory() 함수를 호출하며 원시 메세지의 'BODY[]'부분을 전달하여 해당 이메일의 Pyzmessage 객체를 만든다.
+
+```python
+>>> msg.get_subject()
+'Hello!'
+>>> msg.get_addresses('from')
+[('','no-reply@accounts.google.com')]
+>>> msg.get_addresses('to')
+[('bokyeong3659@gmail.com')]
+>>> msg.get_addresses('cc')
+[]
+>>> msg.get_addresses('bcc')
+[]
+```
+
+- get_addresses() 함수의 매개변수는 from(발신), to(수신), cc(참조), bcc(숨은 참조)이다. 
+- 요청된 필드에 주소가 없으면 get_addresses()는 빈 리스트를 돌려준다.
 
 
