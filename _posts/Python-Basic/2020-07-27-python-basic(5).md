@@ -193,4 +193,27 @@ msg = pyzmail.Pyzmessage.factory(raw_msg[6]['BODY[]'])
 - get_addresses() 함수의 매개변수는 from(발신), to(수신), cc(참조), bcc(숨은 참조)이다. 
 - 요청된 필드에 주소가 없으면 get_addresses()는 빈 리스트를 돌려준다.
 
+<br>
+
+#### 본문 가져오기
+- 이메일은 일반 텍스트, HTML, 또는 양쪽 모두에 걸친 형식으로 보낼 수 있다.
+- 일반 텍스트 이메일은 텍스트만 포함하는 반면 HTML 이메일은 색상, 글꼴, 이미지 등을 가질 수 있기 때문에 이메일 메시지를 웹페이지처럼 보이게 한다.
+    - 이메일이 일반 텍스트라면 Pyzmessage 객체의 html_part 속성은 None으로 설정된다.
+    - 이메일이 HTML으로만 되어있다면 Pyzmessage 객체의 text_part 속성은 None으로 설정된다.
+
+```python
+msg.text_part != None
+>> True
+msg.text_part.get_payload().decode(message.text_part.charset)
+>> 'send to PyZmessage!\r\n\r\n-Al\r\n'
+msg.html_part != None
+>> True
+msg.html_part.get_payload().decode(message.html_part.charset)
+>> '<div dir="ltr"><div>send to PyZmessage!<br><br></div>-Al
+   <br></div>\r\n'
+```
+
+- 위 예제의 이메일은 일반 텍스트 및 HTML을 모두 가지고 있으므로 text_part, html_part 둘 다 None이 아니다.
+- 메시지의 text_part에 get_payload()를 호출하고 돌려받은 바이트 값에 decode() 메소드를 호출하면 이메일의 텍스트 버전에 대한 문자열을 돌려받는다.
+
 
