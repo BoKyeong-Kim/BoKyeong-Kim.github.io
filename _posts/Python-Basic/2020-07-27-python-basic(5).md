@@ -216,4 +216,26 @@ msg.html_part.get_payload().decode(message.html_part.charset)
 - 위 예제의 이메일은 일반 텍스트 및 HTML을 모두 가지고 있으므로 text_part, html_part 둘 다 None이 아니다.
 - 메시지의 text_part에 get_payload()를 호출하고 돌려받은 바이트 값에 decode() 메소드를 호출하면 이메일의 텍스트 버전에 대한 문자열을 돌려받는다.
 
+<br>
+
+#### 이메일 지우기
+- 이메일을 지우려면 IMAPClient 객체의 delete_messages() 메소드에 메세지 UID의 리스트를 전달한다.
+    - 이 메소드는 해당 이메일에 \Deleted 플래그를 붙인다.
+    - expunge() 메소드를 호출하면 현재 선택한 폴더에 \Deleted 플래그가 붙은 모든 이메일을 지운다.
+
+```python
+imap_obj.select_folder('INBOX', readonly=False)
+UIDs = imap_obj.search(['ON 05-May-2020'])
+UIDs
+>> [6]
+imap_obj.delete_messages(UIDs)
+>> {6: ('\\Seen', '\\Deleted')}
+imap_obj.expunge()
+>> ('Success', [(51, 'EXISTS')])
+```
+- select_folder() 메소드의 매개변수로 INBOX를 전달해서 받은 편지함을 선택하였고, readonly=False를 전달하여 이메일을 지울 수 있도록 설정했다.
+- 특정 날짜에 받은 메시지를 받은 편지함에서 검색한 후, 돌려받은 메시지의 ID를 UIDs에 저장하였다.
+- delete_messages() 메소드를 호출하면서 UIDs를 전달하면 사전값을 돌려받는다. (메시지 ID와 매시지 플래그의 튜플)
+- expunge()를 호출하면 \Deleted 플래그가 붙은 메시지를 완전히 지워버리며 이메일 삭제에 아무런 문제가 없다면 성공 메시지를 돌려준다.
+    - 지메일의 경우 expunge 명령을 기다리지 않고 delete_messages()로 지운 이메일을 자동으로 완전 삭제해버린다고 한다.
 
