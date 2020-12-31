@@ -3,7 +3,7 @@ layout: post
 title: 머신러닝 모르는 사람도 가능한 인공지능 웹서비스 만들기
 subtitle: < DLD, Daejeon Learning Day >
 feature-img: "assets/img/sample_feature_img_2.png"
-categories : [AI/ML]
+categories : [Daily/Recap]
 tags: [AI,ML, machinelearing, webservice, DLD, 인공지능웹서비스, 후기]
 ---
 

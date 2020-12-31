@@ -3,7 +3,7 @@ layout: post
 title: 첫번째 contribution - airflow
 subtitle: < airflow >
 feature-img: "assets/img/sample_feature_img_2.png"
-categories : [Dev/opensource]
+categories : [Daily/Recap]
 tags: [contribution, airflow]
 ---
 
