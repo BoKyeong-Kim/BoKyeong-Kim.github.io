@@ -1,6 +1,6 @@
 ---
 layout: post
-title: first contribution 
+title: first contribution
 subtitle: < airflow >
 feature-img: "assets/img/sample_feature_img_2.png"
 categories : [Dev/opensource]
@@ -27,12 +27,8 @@ tags: [contribution, airflow]
 
 [https://github.com/apache/airflow/pull/7590](https://github.com/apache/airflow/pull/7590)
 
+<br>
 
-운좋게 얻어걸렸지만 기분이 좋다!!! 
-
-
-이것을 시작으로 앞으로도 계속해서 컨트리뷰션해야지!! :) 
-
-
-내부적인 기능 추가까지도 도전해보자!(전체를 파악했다는 가정하에)
-
+airflow tutorial 할 때 database를 초기화할때 v2.0.0은 db init으로 초기화해주어야한다.
+위 컨트리뷰션을 통해 airflow가 내부적으로 어떻게 구성되어있는지, 어떤 기술을 사용했는지 새롭게 배운 것들이 많아서 좋았다.
+내부적인 기능 추가까지도 도전해보고자한다.
