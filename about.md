@@ -13,7 +13,7 @@ feature-img: "assets/img/sample_feature_img_2.png"
 <br>
 
 
--  2019.12 ~ ing	  쏘카(SOCAR) 사고관리팀 데이터분석 <p>
+-  2019.12 ~ ing	  쏘카(SOCAR) 인슈테크팀 데이터분석가 <p>
 	<p>
 -  2019.06 ~ 2019.12  한국교통연구원(KOTI) 인턴 <p>
 -  2017.06 ~ 2017.08  한국전자통신연구원(ETRI) 인턴 <p>
